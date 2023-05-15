@@ -4,7 +4,13 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
-
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
 body {
     margin: 0;
     padding: 0;
@@ -19,7 +25,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 p {
@@ -457,7 +463,7 @@ li.dropdown.act a.w3_icons_act {
 /*-- banner-top --*/
 
 .banner-top {
-	background: url(../images2/pin.jpg) no-repeat center 17%;
+	background: url(../images2/estampado.jpg) no-repeat center 45%;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -825,11 +831,12 @@ li.dropdown.act a.w3_icons_act {
 /*-- /grids_bottom_sec --*/
 .grids_sec_2_left {
     padding: 0;
+    
     float: left;
     width: 50%;
 }
 .grids_sec_2_right {
-    padding: 0;
+    padding: 10;
     float: right;
 }
 .grids_sec_2_right img,.grids_sec_2_left img{
@@ -841,14 +848,14 @@ li.dropdown.act a.w3_icons_act {
 /*-- //grids_bottom_sec --*/
 
 .grid_sec_info {
-    padding: 7em 5em;
-    background: #fb383b;
+    padding: 7em 14em;
+    background: #e47323;
 }
 .grid_sec_info.last {
     background: #0a0a0a;
 }
 .shop-button.two a {
-    background: #fb383b;
+    background: #e47323;
 }
 button.top_shoe_cart {
     font-size: 1.2em;
@@ -1476,6 +1483,8 @@ p.head_para {
         padding: 3em 2em;
     }
     .grid_sec_info {
+        display: grid;
+        place-items: center;
         padding: 4em 3em;
     }
     .mid_slider_text h5 {
@@ -2042,6 +2051,8 @@ p.head_para {
         bottom: 33%;
     }
     .grid_sec_info {
+        display: grid;
+        place-items: center;
         padding: 3em 2em;
     }
     .carousel-control.right {

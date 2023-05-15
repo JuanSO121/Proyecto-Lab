@@ -62,7 +62,7 @@ div#my-cart-modal .btn-danger:hover {
 }
 
 div#my-cart-modal strong {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Nunito', sans-serif;
 	color: #000;
 	font-size: 15px;
 }
@@ -74,7 +74,7 @@ div#my-cart-modal .modal-footer {
 div#my-cart-modal button.btn.btn-default, div#my-cart-modal button.btn.btn-primary {
 	padding: 8px 0;
 	width: 15%;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Nunito', sans-serif;
 	font-size: 14px;
 	border: none;
 	border-radius: 0;
@@ -99,7 +99,7 @@ div#my-cart-modal .alert-danger {
 	color: #FFF;
 	text-align: center;
 	background-color: #c41228;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Nunito', sans-serif;
 	font-size: 15px;
 	margin: 20px;
 	border: none;
@@ -418,6 +418,7 @@ span.money {
 	margin: 0 auto;
 	position: absolute;
 	transition: all 0.5s ease-out 0s;
+	border-radius: 10px;
 }
 
 .men-thumb-item:hover .inner-men-cart-pro .link-product-add-cart {
@@ -425,26 +426,27 @@ span.money {
 }
 
 .link-product-add-cart:hover {
-    background: #fb383b;
+    background: #fb7638;
 	color: #fff;
 }
 
 ul.stars i {
-	font-size: 9px;
+	font-size: 18px;
+	border: 30px;
 }
 ul.stars li {
   list-style:none;
   display:inline-block;
 }
 ul.stars li a {
-	color:#333;
+	color:#fb7638;
 }
 ul.stars li a:hover {
-	color:#fb383b;
+	color:#fb7638;
 }
 .product-shoe-info {
-    padding: 15px;
-    border: 1px solid #e4e4e4;
+    padding: 20px;
+    border: 5px solid #e4e4e4;
 }
 /*-- //effect on products --*/
 
@@ -457,7 +459,7 @@ ul.stars li a:hover {
 }
 
 .select-box {
-	background: rgba(255, 76, 76, 0.66);
+	background: rgba(238, 134, 86, 0.66);
 	padding: 30px 30px;
 	margin: 40px 0;
 	border-radius: 6px;
