@@ -1887,7 +1887,7 @@ var defaults = module.exports = {
 
     parent: (typeof document !== 'undefined') ? document.body : null,
 
-    action: 'checkout.html',
+    action: 'carrito.html',
 
     target: '',
 
@@ -1900,8 +1900,8 @@ var defaults = module.exports = {
     strings: {
         button: 'Ir a Pagar',
         subtotal: 'Subtotal:',
-        discount: 'Discount:',
-        empty: 'Your shopping cart is empty'
+        discount: 'Descuento:',
+        empty: 'Su carrito esta lleno'
     }
 
 };
