@@ -56,24 +56,21 @@ Author URL: http://w3layouts.com
 
               <!--/search-right-->
               <div class="navbar-nav search-right nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#Pages" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle" href="catalogo3D.html" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <span class="fa fa-search"></span>
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <div class="search_form">
-                        <form action="search-results.html" method="GET">
-                            <input type="text" placeholder="Search">
+                        <form action="catalogo3D.html" method="GET">
+                            <input type="text" name="search" placeholder="Search">
                             <button type="submit" class="btn" value=""><span class="fa fa-search"
                                     aria-hidden="true"></span></button>
                         </form>
                     </div>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Mugs</a>
-                    <a class="dropdown-item" href="#">Retablos</a>
-                    <a class="dropdown-item" href="#">Estampados</a>
                 </div>
             </div>
+            
             
               <!--//search-right-->
           </div>
@@ -185,25 +182,25 @@ Author URL: http://w3layouts.com
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6 mt-sm-0 mt-4">
                             <div class="column">
-                                <a href="catalogo3S.html"><img src="images2/mugs1.jpg" alt="" class="img-fluid" style="height: 277px;"/></a>
+                                <a href="catalogo3D.html"><img src="images2/mugs1.jpg" alt="" class="img-fluid" style="height: 277px;"/></a>
                                 <div class="info">
-                                    <h4><a href="catalogo3S.html">Mugs</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 mt-sm-0 mt-4">
-                            <div class="column">
-                                <a href="#single"><img src="assets/images/drinks.jpg" alt="" class="img-fluid" /></a>
-                                <div class="info">
-                                    <h4><a href="#single">Retablos</a></h4>
+                                    <h4><a href="catalogo3D.html">Mugs</a></h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-6 mt-md-0 mt-4">
                             <div class="column">
-                                <a href="#single"><img src="assets/images/video.jpg" alt="" class="img-fluid" /></a>
+                                <a href="catalogo3D.html"><img src="assets/images/video.jpg" alt="" class="img-fluid" /></a>
                                 <div class="info">
-                                    <h4><a href="#single">Estampados</a></h4>
+                                    <h4><a href="catalogo3D.html">Retablos</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 mt-md-0 mt-4">
+                            <div class="column">
+                                <a href="catalogo3D.html"><img src="assets/images/video.jpg" alt="" class="img-fluid" /></a>
+                                <div class="info">
+                                    <h4><a href="catalogo3D.html">Estampados</a></h4>
                                 </div>
                             </div>
                         </div>
@@ -535,21 +532,18 @@ Author URL: http://w3layouts.com
   <footer class="py-5">
     <div class="container pt-md-5">
       <div class="footer-logo mb-lg-5 mb-4 text-center">
-        <a class="navbar-brand" href="index2.html"><span class="fa fa-bell-o"></span> Blog Store</a>
+        <a class="navbar-brand" href="index2.html"><span class="fa fa-bell-o"></span> Drawing Graphics</a>
         <p>We want to provide you with a great experience. Your feedback helps us
           bring you more of the events you love and the service you expect.</p>
       </div>
       <div class="footer-grid">
         <div class="w3l-copyright text-center">
-          <div class="social text-center">
             <ul class="d-flex justify-content-center">
-              <li class="mx-md-2 mx-1"><a href="#url" class="facebook"><span class="fab fa-facebook-f"></span></a></li>
-              <li class="mx-md-2 mx-1"><a href="#url" class="twitter"><span class="fab fa-twitter"></span></a></li>
-              <li class="mx-md-2 mx-1"><a href="#url" class="rss"><span class="fas fa-rss"></span></a></li>
-              <li class="mx-md-2 mx-1"><a href="#url" class="linkedin"><span class="fab fa-linkedin-in"></span></a></li>
-              <li class="mx-md-2 mx-1"><a href="#url" class="google"><span class="fab fa-google-plus"></span></a></li>
+                <li class="mx-md-2 mx-1"><a href="#url" class="facebook"><span class="fab fa-facebook-f"></span></a></li>
+                <li class="mx-md-2 mx-1"><a href="#url" class="twitter"><span class="fab fa-twitter"></span></a></li>
+                <li class="mx-md-2 mx-1"><a href="#url" class="whatsapp"><span class="fab fa-whatsapp"></span></a></li>
+                <li class="mx-md-2 mx-1"><a href="#url" class="instagram"><span class="fab fa-instagram"></span></a></li>    
             </ul>
-          </div>
           <p class="mt-4">Proyecto Final. Tienda Online | <a href="http://w3layouts.com/"
             target="=_blank"> Drawing Graphics
           </a></p>
@@ -704,19 +698,6 @@ Author URL: http://w3layouts.com
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- cart-js -->
     <script src="js/minicart.js"></script>
-    <script>
-        shoe.render();
-
-        shoe.cart.on('shoe_checkout', function (evt) {
-            var items, len, i;
-
-            if (this.subtotal() > 0) {
-                items = this.items();
-
-                for (i = 0, len = items.length; i < len; i++) {}
-            }
-        });
-    </script>
 <script>
     // Obtener referencia a los elementos
     const categoriaEscogida = document.getElementById('categoriaEscogida');
