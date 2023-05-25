@@ -10,8 +10,6 @@
 	
 	<link rel="stylesheet" href="css/shop.css" type="text/css" media="screen" property="" />
 	<!-- Owl-carousel-CSS -->
-    
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link rel="stylesheet" href="assets/css/style-starter.css">
     <link href="//fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
 </head>
@@ -37,16 +35,19 @@
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav ml-lg-5 mr-lg-auto">
                         <li class="nav-item @@home__active">
-                            <a class="nav-link" href="index2.html">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="index2.html">inicio <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item @@about__active">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="about.html">Info</a>
                         </li>
-                        <li class="nav-item @@contact__active">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                        <li class="nav-item @@registro__active">
+                            <a class="nav-link" href="registro.html">Registro</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="carrito.html">Carrito de Compras</a>
+                        </li>
+                        <li class="nav-item @@3D__active">
+                          <a class="nav-link" href="catalogo3D.html">Catalogo 3D</a>
                         </li>
                     </ul>
       
@@ -152,11 +153,10 @@
     <div class="w3l-copyright text-center">
         <div class="social text-center">
         <ul class="d-flex justify-content-center">
-            <li class="mx-md-2 mx-1"><a href="#url" class="facebook"><span class="fab fa-facebook-f"></span></a></li>
-            <li class="mx-md-2 mx-1"><a href="#url" class="twitter"><span class="fab fa-twitter"></span></a></li>
-            <li class="mx-md-2 mx-1"><a href="#url" class="rss"><span class="fas fa-rss"></span></a></li>
-            <li class="mx-md-2 mx-1"><a href="#url" class="linkedin"><span class="fab fa-linkedin-in"></span></a></li>
-            <li class="mx-md-2 mx-1"><a href="#url" class="google"><span class="fab fa-google-plus"></span></a></li>
+          <li class="mx-md-2 mx-1"><a href="#url" class="facebook"><span class="fab fa-facebook-f"></span></a></li>
+          <li class="mx-md-2 mx-1"><a href="#url" class="twitter"><span class="fab fa-twitter"></span></a></li>
+          <li class="mx-md-2 mx-1"><a href="#url" class="whatsapp"><span class="fab fa-whatsapp"></span></a></li>
+          <li class="mx-md-2 mx-1"><a href="#url" class="instagram"><span class="fab fa-instagram"></span></a></li>   
         </ul>
         </div>
         <p class="mt-4"> Proyecto Laboratorio de software <a href="http://w3layouts.com/"
@@ -337,6 +337,39 @@
             for (i = 0, len = items.length; i < len; i++) {}
         }
     });
+</script>
+
+<script>
+  // Obtener referencia a los elementos
+  const categoriaEscogida = document.getElementById('categoriaEscogida');
+  const categoryList = document.querySelector('.category_list');
+  const productosContainer = document.getElementById('productosContainer');
+
+  // Manejar el evento de clic en las categorías
+  categoryList.addEventListener('click', function (event) {
+      if (event.target.matches('a')) {
+          event.preventDefault();
+          const categoria = event.target.getAttribute('category');
+
+          // Filtrar y mostrar los productos según la categoría seleccionada
+          filtrarProductosPorCategoria(categoria);
+      }
+  });
+
+  // Filtrar y mostrar los productos según la categoría seleccionada
+  function filtrarProductosPorCategoria(categoria) {
+      const productos = document.querySelectorAll('.product-item');
+
+      productos.forEach(function (producto) {
+          const categoriaProducto = producto.getAttribute('category');
+
+          if (categoria === 'todos' || categoriaProducto === categoria) {
+              producto.style.display = 'block';
+          } else {
+              producto.style.display = 'none';
+          }
+      });
+  }
 </script>
 
 </body>

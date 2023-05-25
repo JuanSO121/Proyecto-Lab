@@ -38,16 +38,19 @@ Author URL: http://w3layouts.com
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
               <ul class="navbar-nav ml-lg-5 mr-lg-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index2.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index2.html">Inicio <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item @@about__active">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="about.html">Info</a>
                     </li>
-                    <li class="nav-item @@contact__active">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                    <li class="nav-item @@registro__active">
+                        <a class="nav-link" href="registro.html">Registro</a>
                     </li>
                     <li class="nav-item @@carrito__active">
                         <a class="nav-link" href="carrito.html">Carrito de Compras</a>
+                    </li>
+                    <li class="nav-item @@3D__active">
+                        <a class="nav-link" href="catalogo3D.html">Catalogo 3D</a>
                     </li>
               </ul>
 
@@ -172,7 +175,7 @@ Author URL: http://w3layouts.com
             <div class="row grids-gap">
                 <div class="col-lg-4 align-self">
                     <div class="text-left">
-                        <h3 class="title-left mb-3">Categories</h3>
+                        <h3 class="title-left mb-3">Categorias</h3>
                         <p class="text-para">Curabitur id gravida risus. Fusce eget ex, nisi ac sed,
                             lacinia est. Quisque ut lectus, eros et, commodo risus. 
                             Nullam sit amet laoreet elit. non magna a velit. </p>
@@ -182,9 +185,9 @@ Author URL: http://w3layouts.com
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-6 mt-sm-0 mt-4">
                             <div class="column">
-                                <a href="mugs.html"><img src="images2/mugs1.jpg" alt="" class="img-fluid" style="height: 277px;"/></a>
+                                <a href="catalogo3S.html"><img src="images2/mugs1.jpg" alt="" class="img-fluid" style="height: 277px;"/></a>
                                 <div class="info">
-                                    <h4><a href="mugs.html">Mugs</a></h4>
+                                    <h4><a href="catalogo3S.html">Mugs</a></h4>
                                 </div>
                             </div>
                         </div>
@@ -547,9 +550,9 @@ Author URL: http://w3layouts.com
               <li class="mx-md-2 mx-1"><a href="#url" class="google"><span class="fab fa-google-plus"></span></a></li>
             </ul>
           </div>
-          <p class="mt-4">© 2020 Blog Store. All Rights Reserved | Design by <a href="http://w3layouts.com/"
-              target="=_blank"> W3layouts
-            </a></p>
+          <p class="mt-4">Proyecto Final. Tienda Online | <a href="http://w3layouts.com/"
+            target="=_blank"> Drawing Graphics
+          </a></p>
         </div>
       </div>
 
@@ -714,6 +717,38 @@ Author URL: http://w3layouts.com
             }
         });
     </script>
+<script>
+    // Obtener referencia a los elementos
+    const categoriaEscogida = document.getElementById('categoriaEscogida');
+    const categoryList = document.querySelector('.category_list');
+    const productosContainer = document.getElementById('productosContainer');
+
+    // Manejar el evento de clic en las categorías
+    categoryList.addEventListener('click', function (event) {
+        if (event.target.matches('a')) {
+            event.preventDefault();
+            const categoria = event.target.getAttribute('category');
+
+            // Filtrar y mostrar los productos según la categoría seleccionada
+            filtrarProductosPorCategoria(categoria);
+        }
+    });
+
+    // Filtrar y mostrar los productos según la categoría seleccionada
+    function filtrarProductosPorCategoria(categoria) {
+        const productos = document.querySelectorAll('.product-item');
+
+        productos.forEach(function (producto) {
+            const categoriaProducto = producto.getAttribute('category');
+
+            if (categoria === 'todos' || categoriaProducto === categoria) {
+                producto.style.display = 'block';
+            } else {
+                producto.style.display = 'none';
+            }
+        });
+    }
+</script>
     </body>
 
     </html>
